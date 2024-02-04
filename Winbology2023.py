@@ -838,7 +838,7 @@ pac12_btn.place(x=400,y=510+15,anchor="c")
 import webbrowser
 
 def callback():
-   webbrowser.open_new_tab("http://www.pornhub.com")
+   webbrowser.open_new_tab("https://www.ncaa.com/")
    
 exper_btn = tk.Button(main, text = "Safe Bracket", bd = "5", command = callback, width=25, height=2, bg="black", fg="white", font="bold")
 exper_btn.pack()
