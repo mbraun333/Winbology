@@ -849,4 +849,3 @@ exper_btn.place(x=400,y=580+15,anchor="c")
 
     
 main.mainloop()
-
