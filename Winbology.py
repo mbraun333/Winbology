@@ -19,8 +19,8 @@ from sys import platform
 #Eastern Region this year
 south_Fav = [1,8,5,4,6,3,7,2]
 south_Upset = [16,9,12,13,11,14,10,15]
-south_Teams = {1:"1 UConn",2:"2 Iowa St.",3:"3 Illinois",4:"4 Auburn",5:"5 San Diego St.",6:"6 BYU",7:"7 Wash. St.",8:"8 FAU",
-               9:"9 Northwestern",10:"10 Drake",11:"11 Duquesne",12:"12 UAB",13:"13 Yale",14:"14 Morehead St.",15:"15 S. Dak. St.",16:"16 Stetson"}
+south_Teams = {1:"1 Auburn",2:"2 Mich St.",3:"3 Iowa St.",4:"4 Texas A&M",5:"5 Michigan",6:"6 Ole Miss",7:"7 Marquette",8:"8 Louisville",
+                9:"9 Creighton",10:"10 New Mexico",11:"11 SDSU/UNC",12:"12 UC San Diego",13:"13 Yale",14:"14 Lipscomb",15:"15 Bryant",16:"16 ALST/SFPA"}
 list_south_Teams = []
 for i in south_Teams:
     list_south_Teams.append(south_Teams[i])
@@ -28,8 +28,8 @@ for i in south_Teams:
 #Midwest Region
 midwest_Fav = [1,8,5,4,6,3,7,2]
 midwest_Upset = [16,9,12,13,11,14,10,15]
-midwest_Teams = {1:"1 Purdue",2:"2 Tennessee",3:"3 Creighton",4:"4 Kansas",5:"5 Gonzaga",6:"6 S. Carolina",7:"7 Texas",8:"8 Utah St.",
-               9:"9 TCU",10:"10 UVA/COLST",11:"11 Oregon",12:"12 McNeese",13:"13 Samford",14:"14 Akron",15:"15 St. Peter's",16:"16 MTST/GRAM"}
+midwest_Teams = {1:"1 Houston",2:"2 Tennessee",3:"3 Kentucky",4:"4 Purdue",5:"5 Clemson",6:"6 Illinois",7:"7 UCLA",8:"8 Gonzaga",
+                9:"9 Georgia",10:"10 Utah St.",11:"11 TEX/XAV",12:"12 McNeese",13:"13 High Point",14:"14 Troy",15:"15 Wofford",16:"16 SIUE"}
 list_midwest_Teams = []
 for i in midwest_Teams:
     list_midwest_Teams.append(midwest_Teams[i])
@@ -37,8 +37,8 @@ for i in midwest_Teams:
 # West Region
 west_Fav = [1,8,5,4,6,3,7,2]
 west_Upset = [16,9,12,13,11,14,10,15]
-west_Teams = {1:"1 N. Carolina",2:"2 Arizona",3:"3 Baylor",4:"4 Alabama",5:"5 Saint Mary's",6:"6 Clemson",7:"7 Dayton",8:"8 Miss. St.",
-               9:"9 Michigan St.",10:"10 Nevada",11:"11 New Mexico",12:"12 Grand Canyon",13:"13 Charleston",14:"14 Colgate",15:"15 LBSU",16:"16 HOW/WAG"}
+west_Teams = {1:"1 Florida",2:"2 St. John's",3:"3 Texas Tech",4:"4 Maryland",5:"5 Memphis",6:"6 Missouri",7:"7 Kansas",8:"8 UConn",
+                9:"9 Oklahoma",10:"10 Arkansas",11:"11 Drake",12:"12 Colorado St.",13:"13 Grand Canyon",14:"14 UNC Wilmington",15:"15 Omaha",16:"16 Norfolk St."}
 list_west_Teams = []
 for i in west_Teams:
     list_west_Teams.append(west_Teams[i])
@@ -46,19 +46,19 @@ for i in west_Teams:
 #Southern Region
 east_Fav = [1,8,5,4,6,3,7,2]
 east_Upset = [16,9,12,13,11,14,10,15]
-east_Teams = {1:"1 Houston",2:"2 Marquette",3:"3 Kentucky",4:"4 Duke",5:"5 Wisconsin",6:"6 Texas Tech",7:"7 Florida",8:"8 Nebraska",
-               9:"9 Texas A&M",10:"10 BSU/COLO",11:"11 NC State",12:"12 James Madison",13:"13 Vermont",14:"14 Oakland",15:"15 W. Kentucky",16:"16 Longwood"}
+east_Teams = {1:"1 Duke",2:"2 Alabama",3:"3 Wisconsin",4:"4 Arizona",5:"5 Oregon",6:"6 BYU",7:"7 Saint Mary's",8:"8 Miss St.",
+               9:"9 Baylor",10:"10 Vanderbilt",11:"11 VCU",12:"12 Liberty",13:"13 Akron",14:"14 Montana",15:"15 Robert Morris",16:"16 AMER/MSM"}
 list_east_Teams = []
 for i in east_Teams:
     list_east_Teams.append(east_Teams[i])
     
 #Conference Teams
-acc = ["4 Duke","1 N. Carolina","11 NC State","6 Clemson","10 UVA/COLST"]
-sec = ["2 Tennessee","3 Kentucky","4 Auburn","4 Alabama","8 Miss St.","9 Texas A&M","7 Florida","6 S. Carolina"]
-big10 = ["9 Michigan St.","5 Wisconsin","1 Purdue","3 Illinois","8 Nebraska","9 Northwestern"]
-big12 = ["1 Houston","6 BYU","6 Texas Tech","3 Baylor","9 TCU","4 Kansas","7 Texas","2 Iowa St."]
-pac12 = ["11 Oregon","7 Wash. St.","2 Arizona","10 BSU/COLO"]
-bigeast = ["1 UConn","3 Creighton","2 Marquette"]
+acc = ["1 Duke","11 SDSU/UNC","5 Clemson"]
+sec = ["2 Tennessee","3 Kentucky","1 Auburn","2 Alabama","8 Miss St.","4 Texas A&M","1 Florida","11 TEX/XAV","9 Georgia","10 Arkansas","6 Missouri","10 Vanderbilt","6 Ole Miss","9 Oklahoma"]
+big10 = ["2 Michigan St.","3 Wisconsin","4 Purdue","6 Illinois","7 UCLA","5 Michigan","4 Maryland","5 Oregon"]
+big12 = ["1 Houston","6 BYU","3 Texas Tech","9 Baylor","4 Arizona","7 Kansas","11 TEX/XAV","3 Iowa St."]
+pac12 = [""]
+bigeast = ["8 UConn","9 Creighton","7 Marquette","11 TEX/XAV","2 St. John's"]
 #Team selection structure (dictionaries with seed keys)
 #all_Teams = {1:"Kansas",2:"Duke"}
 #print(all_Teams[1])
@@ -476,16 +476,15 @@ def basic(south, west, east, midwest, finalFour):
     root.geometry("1300x720")
     tk.Label(root, text = "Your Bracket", font=("Roboto Serif",20)).pack()
     
-    a = os.getlogin()
+    #a = os.getlogin()
     
     #This needs to get revamped
     
-    if platform == "win32":
-        #path1 = "C:/Users/"+a+"/Downloads/Winbology/2023_bracket2.png"
-        path1 = "C:/Users/"+b+"/OneDrive/Documents/Winbology Github Repo/Winbology/2024_bracket.png"
+    #if platform == "win32":
+    path1 = "/home/mbraun33/Documents/Winbology/2025_bracket.png"
         
-    else:
-        path1 = a+"/Downloads/Winbology/2023_bracket2.png"
+    #else:
+        #path1 = a+"/Downloads/Winbology/2023_bracket2.png"
     
     img=Image.open(path1)
 
@@ -793,11 +792,11 @@ main.resizable(width=False, height=False)
 label3 = tk.Label(text="Welcome To Winbology!", font=("Arial",30), bg="#FFFFFF")
 label3.pack()    
 
-b = os.getlogin()
+#b = os.getlogin()
 
 #This needs to be revamped
-if platform == "win32":
-    path2 = "C:/Users/"+b+"/OneDrive/Documents/Winbology Github Repo/Winbology/2024_bracket.png"
+#if platform == "win32":
+path2 = "/home/mbraun33/Documents/Winbology/2025_bracket.png"
     
 #else:
     #path2 = b+"/Downloads/Winbology/bracket2.png"
